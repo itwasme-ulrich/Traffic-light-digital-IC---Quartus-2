@@ -1,0 +1,7 @@
+
+State Machine - |traffic_light|pr_state
+Name pr_state.xanh pr_state.do pr_state.vang pr_state.off 
+pr_state.off 0 0 0 0 
+pr_state.vang 0 0 1 1 
+pr_state.do 0 1 0 1 
+pr_state.xanh 1 0 0 1 

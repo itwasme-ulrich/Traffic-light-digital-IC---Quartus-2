@@ -1,0 +1,74 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity traffic_light is
+	port (stby, clk : in std_logic;
+			red, yellow, green : out std_logic
+			);
+end entity traffic_light;
+--tanso 1hz
+architecture state_machine of traffic_light is
+	TYPE state is (off, vang , do , xanh);
+	CONSTANT timeMAX : integer := 5;
+	CONSTANT timeRED : integer := 2;
+	CONSTANT timeGRN : integer := 2;
+	CONSTANT timeYEL : integer := 5;
+	SIGNAL pr_state, nx_state : state;
+	SIGNAL pr_counter, nx_counter : integer
+		range 0 to timeMAX := 1;
+	SIGNAL reset_counter : std_logic;
+begin
+	process(clk, stby)
+	begin
+		if (stby = '1') then 
+			pr_state <= off;
+		elsif (clk'event and clk = '1') then
+			pr_state <= nx_state;
+			pr_counter <= nx_counter;
+		end if;
+	end process;
+nx_counter <= 1 when reset_counter = '1'
+				else pr_counter + 1;
+	process(pr_counter, pr_state)
+	begin
+		case pr_state is
+			when off =>
+				red <='0';green <='0';yellow <='0';
+				nx_state <= vang;
+				reset_counter <= '1';
+				
+			when vang =>
+				red <='0';green <='0';yellow <='1';
+				if pr_counter = timeYEL then
+					nx_state <= do;
+					reset_counter <= '1';
+				else 
+					nx_state <= pr_state;
+					reset_counter <= '0';
+				end if;
+
+			when do =>
+				red <='1';green <='0';yellow <='0';
+				if pr_counter = timeRED then
+					nx_state <= xanh;
+					reset_counter <= '1';
+				else 
+					nx_state <= pr_state;
+					reset_counter <= '0';	
+				end if;
+
+			when xanh =>
+				red <='0';green <='1';yellow <='0';
+				if pr_counter = timeGRN then
+					nx_state <= vang;
+					reset_counter <= '1';
+				else 
+					nx_state <= pr_state;
+					reset_counter <= '0';
+				end if;
+		end case;
+	end process;
+end architecture state_machine;
+					
+
+	

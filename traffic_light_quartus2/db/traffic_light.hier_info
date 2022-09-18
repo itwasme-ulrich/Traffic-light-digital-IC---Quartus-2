@@ -1,0 +1,14 @@
+|traffic_light
+stby => pr_state~9.DATAIN
+stby => pr_counter[2].ENA
+stby => pr_counter[1].ENA
+stby => pr_counter[0].ENA
+clk => pr_counter[0].CLK
+clk => pr_counter[1].CLK
+clk => pr_counter[2].CLK
+clk => pr_state~5.DATAIN
+red <= red~0.DB_MAX_OUTPUT_PORT_TYPE
+yellow <= yellow~0.DB_MAX_OUTPUT_PORT_TYPE
+green <= green~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

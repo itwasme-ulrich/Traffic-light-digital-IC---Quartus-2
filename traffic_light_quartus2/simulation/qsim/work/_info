@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\CAO HIEU\OneDrive\Máy tính\BTL_CaoVanHieu_2010251_L12\traffic_light_quartus2\simulation\qsim
+vtraffic_light
+Z1 I1FiWfgYafEG?EMznn233d1
+Z2 V52keUYMe0B@Lj[o_VgE1:1
+Z3 dC:\Users\CAO HIEU\OneDrive\Máy tính\BTL_CaoVanHieu_2010251_L12\traffic_light_quartus2\simulation\qsim
+Z4 w1638362925
+Z5 8traffic_light.vo
+Z6 Ftraffic_light.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 kF1Bg:E99i2ZR0PYYAgCW2
+!s85 0
+Z10 !s108 1638362926.159000
+Z11 !s107 traffic_light.vo|
+Z12 !s90 -work|work|traffic_light.vo|
+!s101 -O0
+vtraffic_light_vlg_check_tst
+!i10b 1
+!s100 ^MFEmnSOdPjW5J[W4?ZHk3
+IcA5YoHMG`1F7]FM;Qfi3Q3
+VXjR<UJ?J6Ko3o`jGYU1l62
+R3
+Z13 w1638362924
+Z14 8traffic_light.vt
+Z15 Ftraffic_light.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z16 !s108 1638362926.228000
+Z17 !s107 traffic_light.vt|
+Z18 !s90 -work|work|traffic_light.vt|
+!s101 -O0
+R8
+vtraffic_light_vlg_sample_tst
+!i10b 1
+!s100 8aG?YFRWnOL9eRl<752No2
+I19LiVKCjEVdgB4;>]Sj240
+VJb]dI2^1<GQ6DCJa`YX]c0
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vtraffic_light_vlg_vec_tst
+!i10b 1
+!s100 OVMODiJCZ4WTPe`_XlSKk2
+I@2:?FM]D_[il`@828RZD]1
+V50GdBA^X0neMC0DbN;?Qk1
+R3
+R13
+R14
+R15
+L0 208
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
